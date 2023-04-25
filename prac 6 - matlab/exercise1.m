@@ -1,0 +1,45 @@
+%1.
+for i = 1.5:0.2:2.7
+    disp(i);
+end
+
+%3.
+n = input("Enter a positive integer value: ")
+for i = 1:n
+    fprintf("MATLAB rocks! \n")
+end
+
+%4.
+%When it matters:
+%If your code inside the loop depends on the specific value of i, the loop 
+%behavior will change depending on the values assigned to i. 
+%For example, if you are accessing elements of an array based on the loop 
+%variable i, the accessed elements will differ in both cases.
+
+%When it does not matter:
+%If your code inside the loop is independent of the loop variable i and 
+%only depends on the number of iterations, then the specific values of i 
+%will not impact the outcome. In this case, the difference between the two 
+%loop structures will not matter.
+
+%8.
+random_number = randi([2,5]);
+sum = 0;
+for i = 1:random_number
+    number = input("Enter a number: ");
+   sum = number + sum;
+   fprintf("The sum of the numbers entered so far are: %.1f\n",sum);
+end
+
+%15.
+value = 1;
+columns = 1;
+rows = 1;
+for row = 1:5
+    value = value*2;
+    for col = 1:row
+        product = row * col;
+        fprintf('%d ', product);
+    end
+    fprintf('\n');
+end
